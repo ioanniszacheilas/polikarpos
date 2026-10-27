@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display 2</title>
+    <style>
+        section{
+            display: flex;
+            flex-direction: row; /* default */
+        }
+
+        .col-left, .col-right{
+            border: 1px solid black;
+            flex:50%;
+            height: 200px;
+        }
+
+        .col{
+            border: 1px solid black;
+            flex:1;
+            height: 300px;
+            
+        }
+
+        p{
+            border:1px solid black;
+        }
+
+        p{
+            transition: 1s;
+        }
+
+        .flex-column{
+            flex-direction: column;
+            height: 500px;
+        }
+
+        @media screen and (max-width:1200px) {
+            p{
+                color:red;
+            }
+
+            .item{
+                display: flex;
+            }
+
+            .item .col{
+                flex:50%;
+            }
+        }
+
+        @media screen and (max-width:1000px) {
+            p{
+                text-decoration: underline;
+            }
+        }
+
+        @media (max-width:800px){
+            p{
+                font-size: 20px;
+            }
+        }
+
+        @media (min-width:600px) and (max-width:700px){
+            p{
+                color:blue;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Display Flex</h2>
+    <section>
+        <div class="col-left" style="justify-content: center; display: flex;">
+            <p>Col Left</p>
+        </div>
+        <div class="col-right" style="justify-content:flex-end; display:flex;">
+            <p>col Right</p>
+        </div>
+    </section>
+    <section class="item">
+        <div class="col" style="background-color: silver;">
+            <p>col</p>
+        </div>
+        <div class="col"  style="background-color: lightcyan;">
+            <p>col</p>
+        </div>
+        <div class="col"  style="background-color: silver;">
+            <p>col</p>
+        </div>
+        <div class="col" style="background-color: lightcyan;">
+            <p>col</p>
+        </div>
+    </section>
+    <section>
+        <div class="col" style="display:flex; align-items: center;">
+            <p >Col</p>
+        </div>
+        <div class="col" style="display: flex; justify-content: center; align-items: center;">
+            <p>Col</p>
+        </div>
+        <div class="col" style="display: flex; flex-direction: column; justify-content: space-around;">
+            <p>Col</p>
+            <p>Col</p>
+        </div>
+        <div class="col" style="display: flex; justify-content: space-between;">
+            <p>Col</p>
+            <p>Col</p>
+        </div>
+        <div class="col">
+            <p>Col</p>
+        </div>
+    </section>
+    <section class="flex-column">
+        <div class="col">
+            <p>Col</p>
+        </div>
+        <div class="col">
+            <p>Col</p>
+        </div>
+        <div class="col">
+            <p>Col</p>
+        </div>
+        <div class="col">
+            <p>Col</p>
+        </div>
+        <div class="col">
+            <p>Col</p>
+        </div>
+    </section>
+    
+</body>
+</html>

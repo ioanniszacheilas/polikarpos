@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Overlow</title>
+    <style>
+        .overflow-hidden, .overflow-auto, .overflow-visible{
+            border:1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+
+        .overflow-visible{
+            overflow: visible; /*default*/
+        }
+
+        .overflow-hidden{
+            overflow: hidden;
+        }
+
+        .overflow-auto{
+            /* overflow: scroll; */
+            overflow: auto;
+            width: 200px;
+            height: 40px;
+        }
+
+        .nav1{
+            border:1px solid black;
+            text-align: center;
+        }
+
+        .nav1 a{
+            border:1px solid red;
+            display: inline; /*default */
+            width: 100px;
+            height: 100px;
+            padding:20px;
+            margin:10px;
+        }
+
+        .nav2{
+            border:1px solid black;
+        }
+
+        .nav2 a{
+            border:1px solid red;
+            display: block;
+            padding:20px;
+            margin:10px;
+            text-align: center;
+        }
+
+        .nav3{
+            border:1px solid black;
+            text-align: center;
+            height: 100px;
+        }
+
+        .nav3 a{
+            display: inline-block;
+            border:1px solid red;
+            padding:20px;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Overflow Hidden</h2>
+
+    <div class="overflow-hidden">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus asperiores consectetur inventore aut alias reiciendis itaque quas ducimus nesciunt dolorem quae voluptatum vero ipsum suscipit quasi, laudantium maiores, ut temporibus?</p>
+    </div>
+
+
+    <h2>Overflow Auto - Scroll</h2>
+
+    <div class="overflow-auto">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus asperiores consectetur inventore aut alias reiciendis itaque quas ducimus nesciunt dolorem quae voluptatum vero ipsum suscipit quasi, laudantium maiores, ut temporibus?</p>
+    </div>
+
+        <h2>Overflow Visible</h2>
+
+    <!-- 
+    <div class="inline-overflow">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus asperiores consectetur inventore aut alias reiciendis itaque quas ducimus nesciunt dolorem quae voluptatum vero ipsum suscipit quasi, laudantium maiores, ut temporibus?</p>
+    </div>
+    -->
+    <h2>Menu</h2>
+
+    <h3>Display Inline</h3>
+
+    <nav class="nav1">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+    </nav>
+    <br>
+
+    <h3>Display Block</h3>
+    <nav class="nav2">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+    </nav>
+    <br>
+
+    <h3>Display Inline Block</h3>
+    <nav class="nav3">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+    </nav>
+
+</body>
+</html>
